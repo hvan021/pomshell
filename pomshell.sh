@@ -93,9 +93,9 @@ fi
 #==========================
 
 # convert minute to seconds and millisec
-pom_length_in_seconds=$(( 6 * $POM_LENGTH ))
-break_length_in_seconds=$(( 6 * $BREAK_LENGTH ))
-break_length_in_millisec=$(( 360 * $BREAK_LENGTH ))
+pom_length_in_seconds=$(( 60 * $POM_LENGTH ))
+break_length_in_seconds=$(( 60 * $BREAK_LENGTH ))
+break_length_in_millisec=$(( 3600 * $BREAK_LENGTH ))
 
 start_program
 
