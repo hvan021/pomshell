@@ -99,22 +99,22 @@ break_length_in_millisec=$(( 3600 * $BREAK_LENGTH ))
 
 start_program
 
-c=1
-while [ $c -le $NUM_POM ]
+current_pom=1
+while [ $current_pom -le $NUM_POM ]
 do
-    pom_count="Pomodoro $c"
-    break_count="break $c"
+    pom_count="Pomodoro $current_pom"
+    break_count="break $current_pom"
 
     pomodoro_start "$pom_count"
 
-    if [ $c -eq $NUM_POM ] ; then
+    if [ $current_pom -eq $NUM_POM ] ; then
         end_program
         exit
     else
         break_start "$break_count"
     fi
 
-	(( c++ ))
+	(( current_pom++ ))
 
 done
 
